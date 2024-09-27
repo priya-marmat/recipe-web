@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+box-sizing: border-box;
+}
+body{
+    background-color:#fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 50px;
+    background-color:  #f2f4f3;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+
+}
+.logo{
+    font-size: 40px;
+    margin-left: 5px;
+}
+.search-button {
+    background-color: #b6c454;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.recipe-input {
+    height: 35px;
+    /*width: 70px;*/
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #91972a;
+}
+.search-box{
+    margin-top: 8px;
+}
+
+
+.recipe-box{
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 20px;
+   justify-content: space-around;
+   text-align: center;
+   margin-top: 80px;
+
+}
+.recipe{
+    background-color: #b6c454;
+    color: #000;
+    max-width: 350px;
+}
+.recipe img{
+    height: 300px;
+
+}
+.recipe h3{
+    font-size: 24px;
+}
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    
+}
+
+
+.recipe:hover{
+    box-shadow: 1px 1px 8px #d8d174;
+    /* background-color: #b6c454; */
+    transform: translate(-2px);/*for slite movement*/
+}
+.recipe button{
+    margin-top: 15px;
+    background-color:#d8d174;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.view:hover{
+    border: 2px solid #f2f4f3;
+    
+}
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%) ;
+    background-color: #e6d3a3;
+    width: 45%;
+    height: 60%;
+    font-size: 20px;
+    border-radius: 12px;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+/* adding scroll bar to popup */
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background: #f2f4f3;
+    border-radius: 18px;
+}
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.ingridientName{
+    margin-left: 8px;
+    font-size: 20px;
+}
+.instraction{
+    font-size: 20px;
+    margin-left: 8px;
+}
+.recipe-close{
+    border: none;
+    font-size: 18px;
+    background-color: #91972a;
+    padding: 10px;
+    border-radius: 4px;
+}
